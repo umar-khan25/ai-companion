@@ -28,7 +28,7 @@ export const Categories = ({
 
     router.push(url);
   };
-console.log(data,'dataaDA')
+//console.log(data,'dataaDA')
   return (
     <div className="w-full overflow-x-auto space-x-2 flex p-1">
       <button
