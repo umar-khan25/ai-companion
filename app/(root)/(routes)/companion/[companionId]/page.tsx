@@ -27,6 +27,8 @@ const CompanionIdPage = async ({
 //     return redirect("/");
 //   }
 
+//so what is happening here.We are gettting url or param id like http://localhost:3000/companion/paramId so we get that param id and find same data in prismadb if we
+//find then we store it in companion variable and pass it to companion form like below as initialData.
   const companion = await prismadb.companion.findUnique({
     where: {
       id: params.companionId,

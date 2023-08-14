@@ -1,7 +1,7 @@
 "use client";
 
 import * as z from "zod";
-// import axios from "axios";
+import axios from "axios";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ImageUpload } from "@/components/image-upload";
-// import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
  import { Separator } from "@/components/ui/separator";
 import { Select, SelectContent, SelectItem, SelectValue, SelectTrigger } from "@/components/ui/select";
 
@@ -63,7 +63,7 @@ export const CompanionForm = ({
   categories,
   initialData
 }: CompanionFormProps) => {
-  //const { toast } = useToast();
+  const { toast } = useToast();
   const router = useRouter();
 
   const form = useForm<z.infer<typeof formSchema>>({
