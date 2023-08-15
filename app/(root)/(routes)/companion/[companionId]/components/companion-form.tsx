@@ -79,7 +79,7 @@ export const CompanionForm = ({
   });
 
   const isLoading = form.formState.isSubmitting;
-
+console.log("test")
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       if (initialData) {
